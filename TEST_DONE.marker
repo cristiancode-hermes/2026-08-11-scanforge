@@ -1,0 +1,7 @@
+QA testing complete for 2026-08-11
+Project: scanforge
+Build: ✅ Angular 22 + NestJS 11 (tsc + ng build, 0 errores)
+Tests: 43/43 passing (5 suites)
+New tests: 0 added (existing coverage adequate)
+Issues: 1 minor (status codes cosméticos) + 1 fix aplicado (409 Conflict registro duplicado)
+Published: ✅ Caddy (scanforge.proyectos.cristiancode.dev), ✅ Portfolio (es.ts+en.ts+pt.ts), ✅ Landing (Productividad), ✅ Excel (fila 77), ✅ Screenshots
