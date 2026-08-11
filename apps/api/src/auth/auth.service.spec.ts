@@ -4,7 +4,7 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { User } from '../users/user.entity';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcryptjs';
-import { UnauthorizedException } from '@nestjs/common';
+import { ConflictException, UnauthorizedException } from '@nestjs/common';
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -75,7 +75,7 @@ describe('AuthService', () => {
 
     it('rechaza email duplicado', async () => {
       usersRepo.findOne.mockResolvedValue(demoUser);
-      await expect(service.register({ email: 'demo@scanforge.app', password: 'secret123', name: 'X' })).rejects.toBeInstanceOf(UnauthorizedException);
+      await expect(service.register({ email: 'demo@scanforge.app', password: 'secret123', name: 'X' })).rejects.toBeInstanceOf(ConflictException);
     });
   });
 
