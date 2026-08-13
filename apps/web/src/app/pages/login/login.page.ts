@@ -21,7 +21,7 @@ import { ToastService } from '../../services/toast.service';
           [(ngModel)]="identifier"
           name="identifier"
           placeholder="ana@example.com"
-          autocomplete="username"
+          autocomplete="off"
           required
         />
       </div>
@@ -35,7 +35,7 @@ import { ToastService } from '../../services/toast.service';
             [(ngModel)]="password"
             name="password"
             placeholder="••••••••"
-            autocomplete="current-password"
+            autocomplete="new-password"
             required
           />
           <button
